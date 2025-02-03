@@ -33,4 +33,5 @@ Persona Diagram:
 
 
 
-
+link to site: 
+https://cse134-hw2-kiminus.netlify.app/
