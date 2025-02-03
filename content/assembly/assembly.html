@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Assembly Language x86 – GNU Assembly (AT&T)">
+    <title>Assembly Language</title>
+    <link rel="icon" href="/static/images/icons/favicon.ico">
+    <style>
+        sliding-on-hover {
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        sliding-on-hover:hover {
+            transform: translateX(20px);
+        }
+
+        icon-flip {
+            display: inline-block;
+            transition: rotate 0.3s ease;
+            cursor: pointer;
+        }
+
+        icon-flip:hover {
+            rotate: 90deg;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <sliding-on-hover>
+            <hgroup>
+                <h1>Assembly Language</h1>
+                <h2>x86 -- GNU Assembly (AT&T)</h2>
+            </hgroup>
+        </sliding-on-hover>
+
+        <nav>
+            <ul>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../architecture/architecture.html">Computer Architecture</a></li>
+                <li><a href="../performance/performance.html">Performance</a></li>
+                <li><a href="../optimization/optimization.html">Compiler Optimizations</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>textbook references</h2>
+            <iframe src="https://en.wikipedia.org/wiki/X86_assembly_language" width="600" height="300"></iframe>
+        </section>
+        <section>
+            <h2>Instruction Set Overview</h2>
+            <p><dfn>X86</dfn> is an <abbr>RSA</abbr> (Reduced Set Architecture) developed by <em>Intel and AMD</em>,
+                commonly
+                used in
+                servers.</p>
+            <p><abbr>CISC</abbr> (Complex Instruction Set Computer) and <abbr>RISC</abbr> (Reduced Instruction Set
+                Computer) define
+                how instructions operate.</p>
+
+            <details>
+                <summary><em>CISC vs RISC</em></summary>
+                <abbr>CISC</abbr> (Complex Instruction Set Computing) uses a large set of complex instructions, reducing
+                the number of instructions
+                per program but increasing cycles per instruction, with more hardware complexity (e.g., x86). RISC
+                (Reduced Instruction
+                Set Computing) uses a smaller set of simple instructions that execute quickly, requiring more
+                instructions per program
+                but simplifying hardware and improving performance (e.g., ARM).
+            </details>
+        </section>
+
+        <section>
+            <h2>Registers and Syntax</h2>
+            <sliding-on-hover>
+                <dl>
+                    <dt><b>%EAX</b></dt>
+                    <dd>Accumulator Register - Used for arithmetic operations and returns.</dd>
+                    <dt><b>%EBX</b></dt>
+                    <dd>Base Register - Typically used for memory addressing.</dd>
+                    <dt><b>%ECX</b></dt>
+                    <dd>Counter Register - Used in loops and shift operations.</dd>
+                    <dt><b>%EDX</b></dt>
+                    <dd>Data Register - Used in I/O operations and arithmetic calculations.</dd>
+                </dl>
+            </sliding-on-hover>
+        </section>
+
+        <section>
+            <h2>Common Instructions</h2>
+            <sliding-on-hover>
+
+                <table border="1">
+                    <caption>Instruction Set and Descriptions</caption>
+                    <colgroup>
+                        <col span="1">
+                        <col span="1">
+                    </colgroup>
+                    <tr>
+                        <th>Instruction</th>
+                        <th>Meaning</th>
+                    </tr>
+                    <tr>
+                        <td><code>MOV dst, src</code></td>
+                        <td>Copy data from src to dst</td>
+                    </tr>
+                    <tr>
+                        <td><code>ADD dst, src</code></td>
+                        <td>Add src to dst, store in dst</td>
+                    </tr>
+                    <tr>
+                        <td><code>SUB dst, src</code></td>
+                        <td>Subtract src from dst</td>
+                    </tr>
+                    <tr>
+                        <td><code>MUL src</code></td>
+                        <td>Multiply AX by src, result in DX:AX</td>
+                    </tr>
+                </table>
+            </sliding-on-hover>
+        </section>
+
+        <section>
+            <h2>Visual Demonstration</h2>
+            <canvas width="300" height="200" style="border:1px solid black;">
+                <script>
+                    const canvas = document.querySelector('canvas');
+                    const ctx = canvas.getContext('2d');
+                    ctx.moveTo(0, 0);
+                    ctx.lineTo(200, 100);
+                    ctx.stroke();
+                    ctx.font = "20px Arial";
+                    ctx.fillText("Demand Curve", 20, 130);
+                </script>
+            </canvas>
+        </section>
+
+        <section>
+            <h2>Video Explanation</h2>
+            <video width="320" height="240" controls>
+                <source src="/content/assembly/videos/assembly_example.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+
+        <section>
+            <h2>Image Variants</h2>
+
+        </section>
+
+
+        <section>
+            <h2>Effective Address Calculation</h2>
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+                <mi>Effective Address</mi>
+                <mo>=</mo>
+                <mi>m</mi>
+                <mo>+</mo>
+                <mo>(</mo>
+                <mi>R</mi>
+                <mo>[</mo>
+                <mi>base</mi>
+                <mo>]</mo>
+                <mo>+</mo>
+                <mi>R</mi>
+                <mo>[</mo>
+                <mi>index</mi>
+                <mo>]</mo>
+                <mo>*</mo>
+                <mi>scale</mi>
+                <mo>)</mo>
+            </math>
+        </section>
+        <blockquote>
+            <p><code>Note:</code> Use <code>LEA</code> for address calculation without memory access.</p>
+        </blockquote>
+        <section>
+            <section>
+                <h2>Basic Questions</h2>
+                <form>
+                    <fieldset>
+                        <legend>Instruction Understanding</legend>
+                        <label for="instruction-choice">Which instruction copies data?</label>
+                        <select id="instruction-choice" name="instruction">
+                            <optgroup label="Instructions">
+                                <option value="mov">MOV</option>
+                                <option value="add">ADD</option>
+                                <option value="sub">SUB</option>
+                            </optgroup>
+                        </select>
+                    </fieldset>
+                </form>
+                <form>
+                    <picture>
+                        <svg width="500" height="100" xmlns="http://www.w3.org/2000/svg">
+                            <text x="10" y="40" font-size="20">ADD $1, %rax means</text>
+
+                            <rect x="250" y="15" width="120" height="30" fill="white" stroke="black" stroke-width="2" />
+
+                            <text x="260" y="37" font-size="16" fill="gray">Answer here</text>
+                        </svg>
+                    </picture>
+                    <br>
+                    <input type="submit" value="Submit">
+                </form>
+            </section>
+            <h2>Practice Questions</h2>
+            <ol>
+                <li>
+                    <p>what is equivalent of the following code:</p>
+                    <code>4(%eax, %ebx, 2)</code>
+                    <br>
+                    <br>
+                    <span>Answer:</span>
+                    <form>
+                        <span><input type="number" name="q1-constant-input">
+                            <code>+ (R[%eax] + R[%ebx] *</code>
+                            <input type="number" name="q1-type-size-input">
+                            <code>)</code>
+                        </span>
+                        <br>
+                        <input type="submit" value="Submit">
+                    </form>
+                    <hr>
+                </li>
+                <li>
+                    <p>suppose y is in %rax, x is in %rbx, what instructions implement <code> y = *x?</code></p>
+                    <blockquote><code>int y, int *x</code></blockquote>
+                    <span>Answer:</span>
+                    <br>
+                    <span>instruction to load *x:
+                        <input list="q2-answers-x" name="q2-answers-x"></span>
+                    <datalist id="q2-answers-x">
+                        <option value="%rbx">
+                        <option value="movq 0(%rbx), %rcx">
+                        <option value="movq %rbx, %rcx">
+                        <option value="movq 0(%rbx), %rcx
+                        movq 0(%rcx), %ecx">
+                    </datalist>
+                    <br>
+                    <span>instruction to assign value to y: <input list="q2-answers-y" name="q2-answers-y"></span>
+                    <datalist id="q2-answers-y">
+                        <option value="%rax">
+                        <option value="movq %rcx, %rax">
+                        <option value="movq %rcx, 0(%rax)">
+                        <option value="movq %rcx, (%rax)">
+                    </datalist>
+                    <br>
+                    <input type="submit" value="Submit">
+                    <hr>
+                </li>
+                <li>
+                    <p>consider the following code, how many basic blocks are there?</p>
+                    <img src="/content/assembly/images/q3.png" alt="Basic Block Code">
+                    <fieldset>
+                        <legend>Number of Basic blocks</legend>
+                        <label for="q3-num-basic-blocks">number of basic blocks</label>
+                        <select id="q3-num-basic-blocks" name="number-of-blocks">
+                            <optgroup label="number-of-blocks">
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </optgroup>
+                        </select>
+                    </fieldset>
+                </li>
+            </ol>
+
+        </section>
+
+        <section>
+            <h2>References</h2>
+            <ul>
+                <li><cite><a href="https://developer.mozilla.org/en-US/">MDN Web Docs</a></cite></li>
+                <li><cite><a href="https://en.wikipedia.org/wiki/Compiler">Wikipedia: Compiler</a></cite></li>
+                <li><cite><a href="https://www.gnu.org/software/gcc/">GCC Compiler Documentation</a></cite></li>
+            </ul>
+        </section>
+
+        <dialog open>
+            <p>Find a problem? contact us!</p>
+            <form method="dialog">
+                <button>OK</button>
+            </form>
+        </dialog>
+    </main>
+    <footer>
+        <p>&copy; 2025 kiminus<del>@github</del>. All rights reserved. </p>
+        <p>external links: </p>
+        <icon-flip><img src="/content/assembly/images/github.png" width="20px"></icon-flip>
+        <p><ins>Last updated on February 2, 2025</ins></p>
+    </footer>
+    <noscript>
+        <p>Your browser does not support JavaScript or it is disabled. Some features may not work as intended.</p>
+    </noscript>
+</body>
+
+</html>

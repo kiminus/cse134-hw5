@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compiler design and asssembly language</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/homepage.css">
+    <link rel="icon" href="/static/images/icons/favicon.ico">
+</head>
+
+<body>
+    <noscript>
+        <p>Your browser does not support JavaScript or it is disabled. Some features may not work as intended.</p>
+    </noscript>
+    <header>
+        <h1>Compiler Instruction and Design</h1>
+        <pre>
+        _  __ ___ __  __ _   _ _   _ ____  
+        | |/ /|_ _|  \/  | | | | \ | |  _ \ 
+        | ' /  | || |\/| | | | |  \| | | | |
+        | . \  | || |  | | |_| | |\  | |_| |
+        |_|\_\|___|_|  |_|\___/|_| \_|____/ 
+        </pre>
+
+        <nav>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/content/assembly/assembly.html">Assembly Language</a></li>
+                <li><a href="/content/architecture/architecture.html">Computer Architecture</a></li>
+                <li><a href="/content/performance/performance.html">Performance</a></li>
+                <li><a href="/content/optimization/optimization.html">Compiler Optimizations</a></li>
+                <li><a href="/content/code/interpretation.html">Code Interpretation</a></li>
+            </ul>
+        </nav>
+        <figure>
+            <a href="settings.html">
+                <img src="static/images/icons/settings.png" alt="Settings Icon" width="30" height="30">
+                <figcaption>Settings <kbd>Ctrl+S</kbd></figcaption>
+            </a>
+        </figure>
+    </header>
+
+    <main>
+        <search>
+            <h2>Search the Site</h2>
+            <form action="#" method="get">
+                <label for="search">Search:</label>
+                <input type="text" id="search" name="search">
+                <button type="submit">
+                    Search
+                    <audio id="click-sound" src="static/audio/button_click.mp3"></audio>
+                </button>
+            </form>
+        </search>
+        <section>
+            <h2>Assembly language</h2>
+            <p>This site provides comprehensive resources for understanding compiler instruction and design. Explore
+                topics from assembly language to compiler optimizations.</p>
+        </section>
+
+        <section>
+            <h2>Latest Topics</h2>
+            <article>
+                <h3>Introduction to Assembly Language</h3>
+                <p>Learn the basics of assembly language, including common instructions and usage.</p>
+                <a href="/content/assembly/assembly.html">Read more...</a>
+            </article>
+
+            <article>
+                <h3>Understanding Computer Architecture</h3>
+                <p>Explore the evolution of computer architecture and key milestones in its development.</p>
+                <a href="/content/architecture/architecture.html">Read more...</a>
+            </article>
+        </section>
+        <section>
+            <h2>References and Sources</h2>
+            <ul>
+                <li><cite><a href="https://developer.mozilla.org/en-US/">MDN Web Docs</a></cite></li>
+                <li><cite><a href="https://en.wikipedia.org/wiki/Compiler">Wikipedia: Compiler</a></cite></li>
+                <li><cite><a href="https://www.gnu.org/software/gcc/">GCC Compiler Documentation</a></cite></li>
+            </ul>
+        </section>
+    </main>
+    <aside>
+        <h2><i>Site planning</i></h2>
+        <p>This site is under construction. Please check back for updates.</p>
+        <p>link to site planning to do list: <a href="site/hw2-htmltag-todo.html">todo.html</a></p>
+    </aside>
+    <aside>
+        <h2>Quick Links</h2>
+        <ul>
+            <li><a href="/content/optimization/optimization.html">Compiler Optimizations</a></li>
+            <li><a href="/content/performance/performance.html">Performance and benchmarks</a></li>
+        </ul>
+    </aside>
+
+
+    <footer>
+        <p>&copy; 2025 kiminus@github. All rights reserved.</p>
+        <address>Contact us at <a href="zliu094@ucsd.edu">username@ucsd.edu</a></address>
+        <!-- <note>submit question in textare</note> -->
+        <p>message us: </p>
+        <textarea rows="3" cols="50" name="message-text" placeholder="please type message here..."></textarea>
+        <button>Submit</button>
+    </footer>
+
+    <template id="note-template">
+        <div class="note">
+            <strong>Note:</strong> This is a reusable note template.
+        </div>
+    </template>
+
+    <hello-world></hello-world>
+
+    <script>
+        class HelloWorld extends HTMLElement {
+            constructor() {
+                super();
+                console.log("Hello World!");
+            }
+        }
+        customElements.define('hello-world', HelloWorld);
+    </script>
+
+</body>
+
+</html>
