@@ -1,3 +1,6 @@
+### link to site: 
+https://cse134-hw2-kiminus.netlify.app/
+
 # Purpose of site
 the purpose of the site is to host my class notes about CSE 142, and explain the topics about assembly language, computer architecture history, performance optimizations, C++ templates and interpreting code from assembly.
 the site intended to aid users to understand complex concepts and provide guidance on how to solve typical problems  
@@ -5,17 +8,15 @@ the site intended to aid users to understand complex concepts and provide guidan
 # Audience Considerations
 Persona Diagram: 
 ![Diagram](./static/images/persona_diagram.png)
-
 # site diagram 
 ![site diagram](./static/images/sitediagram.png)
-
 # wireframes
 ## Homepage Wireframe
 ![alt text](./static/images/homepage_wireframe.png)   
 ## Common page wireframe
-
+![common page](./static/images/common_page.png)
 ## 404 page
-
+![404](./static/images/404.png)
 # content requirements
 1. will be hosted on netlify
 2. site will be built following the practice of progressive enhancement, therefore basic functionalities should be accessible and usable for users without JS/advanced CSS. the site will be using HTML for structure. in the future, we will use typescript instead of JS to ensure site reliablity and code maintainability
@@ -40,5 +41,37 @@ Persona Diagram:
 6. the content is designed for the intended audience to assist in learning 
 7. the platform of presentation is primarily on laptop screen. 
 
-link to site: 
-https://cse134-hw2-kiminus.netlify.app/
+# EC
+### math equation 
+![math equation](./static/images/e=mc2.png)
+```
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mi>E</mi>
+            <mo>=</mo>
+            <mi>m</mi>
+            <msup>
+                <mi>c</mi>
+                <mn>2</mn>
+            </msup>
+        </math>
+```
+### Site Validation
+here is the validation report from w3 validator 
+![validation](./static/images/validation.png)
+
+tries to validate: 
+1. move search inside the body tag, still throw same error
+2. move search inside the main tag, still throw same error
+3. the error thrown may be due to outdated support (or the validator is not updated) to recognize and validate the search tag
+4. according to the [dev site](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/search), the search tag is newly introduced at 2023, so the validator may not be updated. 
+5. in the dev doc, it is suggested to put search tag inside the header element, as what I did. 
+
+
+### meta for search engine:
+
+prevent robot/search engine to find this page: 
+````
+<meta name="keywords" content="compiler design, assembly language, C++, performance, computer architecture">
+<meta property="og:title" content="Compiler Instruction & Design">
+<meta name="robots" content="noindex, nofollow"> 
+````
