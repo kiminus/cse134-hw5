@@ -4,14 +4,14 @@ the site intended to aid users to understand complex concepts and provide guidan
 
 # Audience Considerations
 Persona Diagram: 
-![Diagram](/static/images/persona_diagram.png)
+![Diagram](./static/images/persona_diagram.png)
 
 # site diagram 
-![site diagram](/static/images/sitediagram.png)
+![site diagram](./static/images/sitediagram.png)
 
 # wireframes
 ## Homepage Wireframe
-![alt text](/static/images/homepage_wireframe.png)   
+![alt text](./static/images/homepage_wireframe.png)   
 ## Common page wireframe
 
 ## 404 page
@@ -31,7 +31,14 @@ Persona Diagram:
 3. some sample questions to provide practice examples
 4. external links for reference and further explaination
 
-
+# Presentation Quality 
+1. content side should always have a header, concept introduction, details, and practice question.
+2. every site should use different level headers to provide clear format and breakdown of topics. 
+3. use coolors.co to create a harmonic color scheme and more consistent color pattern
+4. use w3 validator to secure code quality and correctness
+5. a roadmap and wireframe to ensure the development is planned and developed according to plan
+6. the content is designed for the intended audience to assist in learning 
+7. the platform of presentation is primarily on laptop screen. 
 
 link to site: 
 https://cse134-hw2-kiminus.netlify.app/

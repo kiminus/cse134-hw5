@@ -38,18 +38,19 @@
             <figcaption>Settings <kbd>Ctrl+S</kbd></figcaption>
         </figure>
     </header>
-    <search>
-        <h2>Search the Site</h2>
-        <form action="#" method="get">
-            <label for="search">Search:</label>
-            <input type="text" id="fsrch" name="fsrch" placeholder="Type to search...">
-            <button type="submit">
-                Search
-                <audio id="click-sound" src="static/audio/button_click.mp3"></audio>
-            </button>
-        </form>
-    </search>
+
     <main>
+        <h2>Search the Site</h2>
+        <search>
+            <form action="#" method="get">
+                <label for="fsrch">Search:</label>
+                <input type="text" id="fsrch" name="fsrch" placeholder="Type to search...">
+                <button type="submit">
+                    Search
+                    <audio id="click-sound" src="static/audio/button_click.mp3" autoplay></audio>
+                </button>
+            </form>
+        </search>
         <section>
             <h2>Assembly language</h2>
             <p>This site provides comprehensive resources for understanding compiler instruction and design. Explore
