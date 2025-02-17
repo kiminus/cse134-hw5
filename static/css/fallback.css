@@ -155,6 +155,11 @@ picture {
 #settings-menu {
     display: none;
 }
+iframe {
+    border: none;
+    width: 100%;
+    height: 100%;
+}
 
 /* animations */
 @keyframes slideInLeft {

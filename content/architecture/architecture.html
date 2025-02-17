@@ -16,22 +16,33 @@
     <header>
         <hgroup>
             <h1>Computer Architecture</h1>
-            <pre>
-    _  __ ___ __  __ _   _ _   _ ____
-    | |/ /|_ _|  \/  | | | | \ | |  _ \
-    | ' /  | || |\/| | | | |  \| | | | |
-    | . \  | || |  | | |_| | |\  | |_| |
-    |_|\_\|___|_|  |_|\___/|_| \_|____/
-                </pre>
+            <pre id="text-logo">
+_  __ ___ __  __ _   _ _   _ ____
+| |/ /|_ _|  \/  | | | | \ | |  _ \
+| ' /  | || |\/| | | | |  \| | | | |
+| . \  | || |  | | |_| | |\  | |_| |
+|_|\_\|___|_|  |_|\___/|_| \_|____/
+            </pre>
         </hgroup>
         <div class="settings">
-            <figure>
-                <!-- use svg image for icon -->
-                <img src="../../static/images/icons/settings.svg" alt="Icon" width="30" height="30" class="icon">
-                <figcaption>Settings <kbd>Ctrl+S</kbd></figcaption>
+            <!-- accessibility, so setting icons are navigable-->
+            <figure id="settings-menu" tabindex="0">
+                <img src="../../static/images/icons/burger-menu.svg" alt="settings menu" width="30" height="30" class="icon">
+                <figcaption>settings menu <kbd>Ctrl+S</kbd></figcaption>
             </figure>
+            <section id="detailed-settings-menu">
+                <figure tabindex="1">
+                    <img src="../../static/images/icons/reader-settings.svg" alt="user account" width="30" height="30" class="icon">
+                    <figcaption>user account <kbd>Ctrl+U</kbd></figcaption>
+                </figure>
+                <figure tabindex="2">
+                    <img src="../../static/images/icons/settings.svg" alt="reader settings" width="30" height="30" class="icon">
+                    <figcaption>reader settings <kbd>Ctrl+G</kbd></figcaption>
+                </figure>
+            </section>
         </div>
     </header>
+
     <main>
         <aside class="toc">
             <search>
@@ -49,7 +60,7 @@
                 <summary>Table of Contents</summary>
                 <nav>
                     <ul>
-                        <li><a href="../../index.html">Home</a></li>
+                        <li><a href="/index.html">Home</a></li>
                         <li><a href="../assembly/assembly.html">Assembly Language</a></li>
                         <li><a href="../architecture/architecture.html">Computer Architecture</a></li>
                         <li><a href="../performance/performance.html">Performance</a></li>
