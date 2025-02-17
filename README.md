@@ -1,5 +1,8 @@
 ### link to site: 
-https://cse134-hw2-kiminus.netlify.app/
+https://kiminus-cse134hw3.netlify.app/
+
+### link to github:
+https://github.com/kiminus/cse134-HW3
 
 # Purpose of site
 the purpose of the site is to host my class notes about CSE 142, and explain the topics about assembly language, computer architecture history, performance optimizations, C++ templates and interpreting code from assembly.

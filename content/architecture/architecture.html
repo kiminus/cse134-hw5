@@ -5,24 +5,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../../static/images/icons/favicon.ico">
-    <title>computer architecture</title>
+    <link rel="stylesheet" type="text/css" href="../../static/css/fallback.css">
+    <title>Computer Architecture</title>
 </head>
 
 <body>
-    <section>
-        <h2>math equation</h2>
-        <!-- write equation for E = mc^2 using MathML-->
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-            <mi>E</mi>
-            <mo>=</mo>
-            <mi>m</mi>
-            <msup>
-                <mi>c</mi>
-                <mn>2</mn>
-            </msup>
-        </math>
+    <noscript>
+        <p>Your browser does not support JavaScript, or it is disabled. Some features may not work as intended.</p>
+    </noscript>
+    <header>
+        <hgroup>
+            <h1>Computer Architecture</h1>
+            <pre>
+    _  __ ___ __  __ _   _ _   _ ____
+    | |/ /|_ _|  \/  | | | | \ | |  _ \
+    | ' /  | || |\/| | | | |  \| | | | |
+    | . \  | || |  | | |_| | |\  | |_| |
+    |_|\_\|___|_|  |_|\___/|_| \_|____/
+                </pre>
+        </hgroup>
+        <div class="settings">
+            <figure>
+                <!-- use svg image for icon -->
+                <img src="../../static/images/icons/settings.svg" alt="Icon" width="30" height="30" class="icon">
+                <figcaption>Settings <kbd>Ctrl+S</kbd></figcaption>
+            </figure>
+        </div>
+    </header>
+    <main>
+        <aside class="toc">
+            <search>
+                <h2>Search the Site</h2>
+                <form action="#" method="get">
+                    <label for="fsrch">Search:</label>
+                    <input type="text" id="fsrch" name="fsrch" placeholder="Type to search...">
+                    <button type="submit">
+                        Search
+                        <audio id="click-sound" src="../../static/audio/button_click.mp3" autoplay></audio>
+                    </button>
+                </form>
+            </search>
+            <details>
+                <summary>Table of Contents</summary>
+                <nav>
+                    <ul>
+                        <li><a href="../../index.html">Home</a></li>
+                        <li><a href="../assembly/assembly.html">Assembly Language</a></li>
+                        <li><a href="../architecture/architecture.html">Computer Architecture</a></li>
+                        <li><a href="../performance/performance.html">Performance</a></li>
+                        <li><a href="../optimization/optimization.html">Compiler Optimizations</a></li>
+                        <li><a href="../code/interpretation.html">Code Interpretation</a></li>
+                    </ul>
+                </nav>
+            </details>
+        </aside>
+        <div class="content">
+            <h2>math equation</h2>
+            <!-- write equation for E = mc^2 using MathML-->
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+                <mi>E</mi>
+                <mo>=</mo>
+                <mi>m</mi>
+                <msup>
+                    <mi>c</mi>
+                    <mn>2</mn>
+                </msup>
+            </math>
 
-    </section>
+        </div>
+    </main>
 </body>
 
 </html>

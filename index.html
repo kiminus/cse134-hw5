@@ -7,104 +7,125 @@
     <meta name="keywords" content="compiler design, assembly language, C++, performance, computer architecture">
     <meta property="og:title" content="Compiler Instruction & Design">
     <meta name="robots" content="noindex, nofollow">
-    <title>Compiler design and asssembly language</title>
-    <link rel="stylesheet" type="text/css" href="/static/css/homepage.css">
+    <title>Compiler design and assembly language</title>
+    <link rel="stylesheet" type="text/css" href="./static/css/homepage.css">
+    <link rel="stylesheet" type="text/css" href="./static/css/fallback.css">
     <link rel="icon" href="/static/images/icons/favicon.ico">
 </head>
 
 <body>
     <noscript>
-        <p>Your browser does not support JavaScript or it is disabled. Some features may not work as intended.</p>
+        <p>Your browser does not support JavaScript, or it is disabled. Some features may not work as intended.</p>
     </noscript>
     <header>
-        <h1>Compiler Instruction and Design</h1>
-        <pre>
-        _  __ ___ __  __ _   _ _   _ ____  
-        | |/ /|_ _|  \/  | | | | \ | |  _ \ 
-        | ' /  | || |\/| | | | |  \| | | | |
-        | . \  | || |  | | |_| | |\  | |_| |
-        |_|\_\|___|_|  |_|\___/|_| \_|____/ 
-        </pre>
-
-        <nav>
-            <ul>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/content/assembly/assembly.html">Assembly Language</a></li>
-                <li><a href="/content/architecture/architecture.html">Computer Architecture</a></li>
-                <li><a href="/content/performance/performance.html">Performance</a></li>
-                <li><a href="/content/optimization/optimization.html">Compiler Optimizations</a></li>
-                <li><a href="/content/code/interpretation.html">Code Interpretation</a></li>
-            </ul>
-        </nav>
-        <figure>
-            <img src="static/images/icons/settings.png" alt="Settings Icon" width="30" height="30">
-            <figcaption>Settings <kbd>Ctrl+S</kbd></figcaption>
-        </figure>
-        <search>
-            <h2>Search the Site</h2>
-            <form action="#" method="get">
-                <label for="fsrch">Search:</label>
-                <input type="text" id="fsrch" name="fsrch" placeholder="Type to search...">
-                <button type="submit">
-                    Search
-                    <audio id="click-sound" src="static/audio/button_click.mp3" autoplay></audio>
-                </button>
-            </form>
-        </search>
+        <hgroup>
+            <h1>Compiler Instruction and Design</h1>
+            <pre>
+_  __ ___ __  __ _   _ _   _ ____
+| |/ /|_ _|  \/  | | | | \ | |  _ \
+| ' /  | || |\/| | | | |  \| | | | |
+| . \  | || |  | | |_| | |\  | |_| |
+|_|\_\|___|_|  |_|\___/|_| \_|____/
+            </pre>
+        </hgroup>
+        <div class="settings">
+            <figure>
+                <!-- use svg image for icon -->
+                <img src="static/images/icons/settings.svg" alt="Settings Icon" width="30" height="30" class="icon">
+                <figcaption>Settings <kbd>Ctrl+S</kbd></figcaption>
+            </figure>
+        </div>
     </header>
 
     <main>
+        <aside class="toc">
+            <search>
+                <h2>Search the Site</h2>
+                <form action="#" method="get">
+                    <label for="fsrch">Search:</label>
+                    <input type="text" id="fsrch" name="fsrch" placeholder="Type to search...">
+                    <button type="submit">
+                        Search
+                        <audio id="click-sound" src="static/audio/button_click.mp3" autoplay></audio>
+                    </button>
+                </form>
+            </search>
+            <details>
+                <summary>Table of Contents</summary>
+                <nav>
+                    <ul>
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/content/assembly/assembly.html">Assembly Language</a></li>
+                        <li><a href="/content/architecture/architecture.html">Computer Architecture</a></li>
+                        <li><a href="/content/performance/performance.html">Performance</a></li>
+                        <li><a href="/content/optimization/optimization.html">Compiler Optimizations</a></li>
+                        <li><a href="/content/code/interpretation.html">Code Interpretation</a></li>
+                    </ul>
+                </nav>
+            </details>
+        </aside>
+        <div class="content">
+            <aside class="note callout">
+                <strong>Note:</strong> please check this page, assembly language, and computer architecture (under table of contents) for assignment requirements. other pages are not developed
+            </aside>
+            <section>
+                <h2>Assembly language</h2>
+                <p>This site provides comprehensive resources for understanding compiler instruction and design. Explore
+                    topics from assembly language to compiler optimizations.</p>
+            </section>
 
-        <section>
-            <h2>Assembly language</h2>
-            <p>This site provides comprehensive resources for understanding compiler instruction and design. Explore
-                topics from assembly language to compiler optimizations.</p>
-        </section>
+            <section>
+                <h2>Latest Topics</h2>
+                <article>
+                    <h3>Introduction to Assembly Language</h3>
+                    <p>Learn the basics of assembly language, including common instructions and usage.</p>
+                    <a href="/content/assembly/assembly.html">Read more...</a>
+                </article>
 
-        <section>
-            <h2>Latest Topics</h2>
-            <article>
-                <h3>Introduction to Assembly Language</h3>
-                <p>Learn the basics of assembly language, including common instructions and usage.</p>
-                <a href="/content/assembly/assembly.html">Read more...</a>
-            </article>
-
-            <article>
-                <h3>Understanding Computer Architecture</h3>
-                <p>Explore the evolution of computer architecture and key milestones in its development.</p>
-                <a href="/content/architecture/architecture.html">Read more...</a>
-            </article>
-        </section>
-        <section>
-            <h2>References and Sources</h2>
-            <ul>
-                <li><cite><a href="https://developer.mozilla.org/en-US/">MDN Web Docs</a></cite></li>
-                <li><cite><a href="https://en.wikipedia.org/wiki/Compiler">Wikipedia: Compiler</a></cite></li>
-                <li><cite><a href="https://www.gnu.org/software/gcc/">GCC Compiler Documentation</a></cite></li>
-            </ul>
-        </section>
+                <article>
+                    <h3>Understanding Computer Architecture</h3>
+                    <p>Explore the evolution of computer architecture and key milestones in its development.</p>
+                    <a href="/content/architecture/architecture.html">Read more...</a>
+                </article>
+            </section>
+            <section>
+                <h2>References and Sources</h2>
+                <ul>
+                    <li><cite><a href="https://developer.mozilla.org/en-US/">MDN Web Docs</a></cite></li>
+                    <li><cite><a href="https://en.wikipedia.org/wiki/Compiler">Wikipedia: Compiler</a></cite></li>
+                    <li><cite><a href="https://www.gnu.org/software/gcc/">GCC Compiler Documentation</a></cite></li>
+                </ul>
+            </section>
+            <section>
+                <h2><i>Site planning</i></h2>
+                <p>This site is under construction. Please check back for updates.</p>
+                <p>link to site planning to do list: <a href="site/hw2-htmltag-todo.html">todo.html</a></p>
+            </section>
+            <section>
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="/content/optimization/optimization.html">Compiler Optimizations</a></li>
+                    <li><a href="/content/performance/performance.html">Performance and benchmarks</a></li>
+                </ul>
+            </section>
+            <section>
+                <h2>Site Updates</h2>
+                <p>Check back for upCheck back for uCheck back for updates on new content and resources.Check back for updates on new content and resources.Check back for updates on new content and resources.Check back for updates on new content and resources.Check back for updates on new content and resources.Check back for updates on new content and resources.Check back for updates on new content and resources.Check back for updates on new content and resources.Check back for updates on new content and resources.Check back for updates on new content and resources.pdates on new content and resources.Check back for updates on new content and resources.Check back for updates on new content and resources.Check back for updates on new content and resources.Check back for updates on new content and resources.Check back for updates on new content and resources.Check back for updates on new content and resources.dates on new content and resources.Check back for updates on new content and resources.Check back for updates on new content and resources.Check back for updates on new content and resources.Check back for updates on new content and resources.Check back for updates on new content and resources.Check back for updates on new content and resources.Check back for updates on new content and resources.Check back for updates on new content and resources.Check back for updates on new content and resources.Check back for updates on new content and resources.Check back for updates on new content and resources.Check back for updates on new content and resources.Check back for updates on new content and resources.Check back for updates on new content and resources.Check back for updates on new content and resources.Check back for updates on new content and resources.Check back for updates on new content and resources.</p>
+            </section>
+        </div>
     </main>
-    <aside>
-        <h2><i>Site planning</i></h2>
-        <p>This site is under construction. Please check back for updates.</p>
-        <p>link to site planning to do list: <a href="site/hw2-htmltag-todo.html">todo.html</a></p>
-    </aside>
-    <aside>
-        <h2>Quick Links</h2>
-        <ul>
-            <li><a href="/content/optimization/optimization.html">Compiler Optimizations</a></li>
-            <li><a href="/content/performance/performance.html">Performance and benchmarks</a></li>
-        </ul>
-    </aside>
-
-
     <footer>
         <p>&copy; 2025 kiminus@github. All rights reserved.</p>
         <address>Contact us at <a href="zliu094@ucsd.edu">username@ucsd.edu</a></address>
-        <!-- <note>submit question in textare</note> -->
-        <p>message us: </p>
-        <textarea rows="3" cols="50" name="message-text" placeholder="please type message here..."></textarea>
-        <button>Submit</button>
+<!--         <note>submit question in textarea</note>-->
+        <details>
+            <summary>message us: </summary>
+            <label for="message-text">
+                <textarea rows="3" cols="40" name="message-text" id="message-text" placeholder="please type message here..."></textarea>
+            </label>
+            <button>Submit</button>
+        </details>
+
     </footer>
 
     <template id="note-template">
