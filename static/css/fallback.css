@@ -24,7 +24,7 @@
     --font-callout: "Montserrat", sans-serif;
     --font-size: 16px;
 
-    --device-width-cutoff: 900px;
+    --device-width-cutoff: 1024px;
 }
 body {
     font-family: var(--font-body, sans-serif), serif; /* Fallback font */
@@ -34,7 +34,7 @@ body {
     padding: 5px;
 }
 header {
-    background-image: url("../images/header-panel.png");
+    background-image: url("../images/header-panel.webp");
     padding: 10px 5px;
     margin-bottom: 20px;
     display: flex;
@@ -53,12 +53,6 @@ header {
     & hgroup, & .settings {
         z-index: 1;
     }
-
-    @media (max-width: var(--device-width-cutoff)) {
-        & {
-            background-image: url("../images/header-panel.jpg");
-        }
-    }
 }
 /* Main content, all pages should have a content of tables on the left */
 main {
@@ -76,6 +70,7 @@ footer {
     max-width: 300px;
     background-color: var(--background-secondary-color, lightgray);
     position: sticky;
+    top: 0;
     max-height: 80vh;
     animation: slideInLeft 1s, fadeIn 1s;
     padding: 5px 10px;
@@ -153,6 +148,13 @@ kbd {
 .icon {
     filter: invert(1);
 }
+picture {
+    object-fit: contain;
+    object-position: center;
+}
+#settings-menu {
+    display: none;
+}
 
 /* animations */
 @keyframes slideInLeft {
@@ -200,7 +202,7 @@ kbd {
 }
 
 /*responsive design*/
-@media (max-width: var(--device-width-cutoff)) {
+@media (max-width: 1024px) and (min-width: 601px) {
     main {
         grid-template-columns: 1fr;
     }
@@ -233,5 +235,67 @@ kbd {
         flex-direction: column;
         align-items: center;
         text-align: center;
+        /* use jpg instead of png for faster delivery on smaller devices */
+        & {
+            background-image: url("../images/header-panel-small.webp");
+        }
     }
+    #settings-menu {
+        display: none;
+    }
+    #detailed-settings-menu {
+        display: flex;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    .toc {
+        width: 100%;
+        max-width: none;
+    }
+
+    .toc h2 {
+        cursor: pointer;
+    }
+
+    .toc h2::after {
+        content: ' ▼';
+    }
+
+    .toc h2.active::after {
+        content: ' ▲';
+    }
+
+    .toc h2.active + ul {
+        display: block;
+    }
+
+    header picture img {
+        background-image: url("../images/header-panel-small.webp");
+    }
+
+    #text-logo {
+        display: none;
+    }
+
+    #settings-menu {
+        display: block;
+    }
+
+    #detailed-settings-menu {
+        display: none;
+        list-style: none;
+        padding: 0;
+    }
+
 }

@@ -1,10 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>$Title$</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="compiler design, assembly language, C++, performance, computer architecture">
+  <meta property="og:title" content="Compiler Instruction & Design">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Compiler design and assembly language</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="icon" href="/static/images/icons/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="./static/css/fallback.css">
 </head>
+
 <body>
-$END$
+<noscript>
+  <p>Your browser does not support JavaScript, or it is disabled. Some features may not work as intended.</p>
+</noscript>
+<header class="d-flex justify-content-between align-items-center p-3 mb-3 bg-light">
+  <hgroup>
+    <h1>Compiler Instruction and Design</h1>
+    <pre id="text-logo">
+_  __ ___ __  __ _   _ _   _ ____
+| |/ /|_ _|  \/  | | | | \ | |  _ \
+| ' /  | || |\/| | | | |  \| | | | |
+| . \  | || |  | | |_| | |\  | |_| |
+|_|\_\|___|_|  |_|\___/|_| \_|____/
+            </pre>
+  </hgroup>
+  <div class="settings d-none d-md-flex flex-column">
+    <figure>
+      <img src="static/images/icons/settings.svg" alt="settings" width="30" height="30" class="icon">
+      <figcaption>user account <kbd>Ctrl+S</kbd></figcaption>
+    </figure>
+    <figure>
+      <img src="static/images/icons/settings.svg" alt="settings" width="30" height="30" class="icon">
+      <figcaption>reader settings <kbd>Ctrl+G</kbd></figcaption>
+    </figure>
+  </div>
+  <button class="navbar-toggler d-md-none" type="button" data-toggle="collapse" data-target="#settingsMenu" aria-controls="settingsMenu" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="settingsMenu">
+    <div class="settings d-flex flex-column">
+      <figure>
+        <img src="static/images/icons/settings.svg" alt="settings" width="30" height="30" class="icon">
+        <figcaption>user account <kbd>Ctrl+S</kbd></figcaption>
+      </figure>
+      <figure>
+        <img src="static/images/icons/settings.svg" alt="settings" width="30" height="30" class="icon">
+        <figcaption>reader settings <kbd>Ctrl+G</kbd></figcaption>
+      </figure>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <aside class="toc">
+    <search>
+      <h2>Search the Site</h2>
+      <form action="#" method="get">
+        <label for="fsrch">Search:</label>
+        <input type="text" id="fsrch" name="fsrch" placeholder="Type to search..." class="form-control">
+        <button type="submit" class="btn btn-primary mt-2">
+          Search
+          <audio id="click-sound" src="static/audio/button_click.mp3" autoplay></audio>
+        </button>
+      </form>
+    </search>
+    <details>
+      <summary>Table of Contents</summary>
+      <nav>
+        <ul class="list-unstyled">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/content/assembly/assembly.html">Assembly Language</a></li>
+          <li><a href="/content/architecture/architecture.html">Computer Architecture</a></li>
+          <li><a href="/content/performance/performance.html">Performance</a></li>
+          <li><a href="/content/optimization/optimization.html">Compiler Optimizations</a></li>
+          <li><a href="/content/code/interpretation.html">Code Interpretation</a></li>
+        </ul>
+      </nav>
+    </details>
+  </aside>
+  <div class="content">
+    <aside class="note callout">
+      <strong>Note:</strong> please check this page, assembly language, and computer architecture (under table of contents) for assignment requirements. (HW2: please also check todo.html) other pages are not developed
+    </aside>
+    <section>
+      <h2>Assembly language</h2>
+      <p>This site provides comprehensive resources for understanding compiler instruction and design. Explore topics from assembly language to compiler optimizations.</p>
+      <p>here is a basic view of the ARM instruction set:</p>
+      <figure>
+        <picture>
+          <source srcset="static/images/arm_instruction_set_small.webp" type="image/png" media="(max-width: 900px)">
+          <source srcset="static/images/arm_instruction_set.webp" type="image/png">
+          <img src="static/images/arm_instruction_set.webp" alt="ARM Instruction Set" loading="lazy">
+        </picture>
+        <figcaption><a href="https://www.cs.uaf.edu/courses/cs301/2014-fall/notes/arm-asm/">original site</a></figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>Latest Topics</h2>
+      <article>
+        <h3>Introduction to Assembly Language</h3>
+        <p>Learn the basics of assembly language, including common instructions and usage.</p>
+        <a href="/content/assembly/assembly.html">Read more...</a>
+      </article>
+
+      <article>
+        <h3>Understanding Computer Architecture</h3>
+        <p>Explore the evolution of computer architecture and key milestones in its development.</p>
+        <a href="/content/architecture/architecture.html">Read more...</a>
+      </article>
+    </section>
+    <section>
+      <h2>References and Sources</h2>
+      <ul>
+        <li><cite><a href="https://developer.mozilla.org/en-US/">MDN Web Docs</a></cite></li>
+        <li><cite><a href="https://en.wikipedia.org/wiki/Compiler">Wikipedia: Compiler</a></cite></li>
+        <li><cite><a href="https://www.gnu.org/software/gcc/">GCC Compiler Documentation</a></cite></li>
+      </ul>
+    </section>
+    <section>
+      <h2><i>Site planning</i></h2>
+      <p>This site is under construction. Please check back for updates.</p>
+      <p>link to site planning to do list: <a href="site/hw2-htmltag-todo.html">todo.html</a></p>
+    </section>
+    <section>
+      <h2>Quick Links</h2>
+      <ul>
+        <li><a href="/content/optimization/optimization.html">Compiler Optimizations</a></li>
+        <li><a href="/content/performance/performance.html">Performance and benchmarks</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>Site Updates</h2>
+      <p>Check back for updates on new content and resources.</p>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <p>&copy; 2025 kiminus@github. All rights reserved.</p>
+  <address>Contact us at <a href="zliu094@ucsd.edu">username@ucsd.edu</a></address>
+  <details>
+    <summary>citations</summary>
+    <ul>
+      <li><cite><a href="https://unsplash.com/photos/central-computer-processors-cpu-concept-3d-renderingconceptual-image-_LIZ36OHGKk">background image</a></cite></li>
+    </ul>
+  </details>
+  <details>
+    <summary>message us: </summary>
+    <label for="message-text">
+      <textarea rows="3" cols="40" name="message-text" id="message-text" placeholder="please type message here..."></textarea>
+    </label>
+    <button>Submit</button>
+  </details>
+</footer>
+
+<template id="note-template">
+  <div class="note">
+    <strong>Note:</strong> This is a reusable note template.
+  </div>
+</template>
+
+<hello-world></hello-world>
+
+<script>
+  class HelloWorld extends HTMLElement {
+    constructor() {
+      super();
+      console.log("Hello World!");
+    }
+  }
+  customElements.define('hello-world', HelloWorld);
+</script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+
 </html>

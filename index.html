@@ -20,7 +20,7 @@
     <header>
         <hgroup>
             <h1>Compiler Instruction and Design</h1>
-            <pre>
+            <pre id="text-logo">
 _  __ ___ __  __ _   _ _   _ ____
 | |/ /|_ _|  \/  | | | | \ | |  _ \
 | ' /  | || |\/| | | | |  \| | | | |
@@ -29,11 +29,21 @@ _  __ ___ __  __ _   _ _   _ ____
             </pre>
         </hgroup>
         <div class="settings">
-            <figure>
-                <!-- use svg image for icon -->
-                <img src="static/images/icons/settings.svg" alt="Settings Icon" width="30" height="30" class="icon">
-                <figcaption>Settings <kbd>Ctrl+S</kbd></figcaption>
+            <!-- accessibility, so setting icons are navigable-->
+            <figure id="settings-menu" tabindex="0">
+                <img src="static/images/icons/burger-menu.svg" alt="settings menu" width="30" height="30" class="icon">
+                <figcaption>settings menu <kbd>Ctrl+S</kbd></figcaption>
             </figure>
+            <section id="detailed-settings-menu">
+                <figure tabindex="1">
+                    <img src="static/images/icons/reader-settings.svg" alt="user account" width="30" height="30" class="icon">
+                    <figcaption>user account <kbd>Ctrl+U</kbd></figcaption>
+                </figure>
+                <figure tabindex="2">
+                    <img src="static/images/icons/settings.svg" alt="reader settings" width="30" height="30" class="icon">
+                    <figcaption>reader settings <kbd>Ctrl+G</kbd></figcaption>
+                </figure>
+            </section>
         </div>
     </header>
 
@@ -66,12 +76,23 @@ _  __ ___ __  __ _   _ _   _ ____
         </aside>
         <div class="content">
             <aside class="note callout">
-                <strong>Note:</strong> please check this page, assembly language, and computer architecture (under table of contents) for assignment requirements. other pages are not developed
+                <strong>Note:</strong> please check this page, assembly language, and computer architecture (under table of contents) for assignment requirements.
+                (HW2: please also check todo.html) other pages are not developed.
+                <a href="index_framwork.html">this is the link to index.html with bootstrap framework</a>
             </aside>
             <section>
                 <h2>Assembly language</h2>
                 <p>This site provides comprehensive resources for understanding compiler instruction and design. Explore
                     topics from assembly language to compiler optimizations.</p>
+                <p>here is a basic view of the ARM instruction set:</p>
+                <figure>
+                    <picture>
+                        <source srcset="static/images/arm_instruction_set_small.webp" type="image/png" media="(max-width: 900px)">
+                        <source srcset="static/images/arm_instruction_set.webp" type="image/png">
+                        <img src="static/images/arm_instruction_set.webp" alt="ARM Instruction Set" loading="lazy">
+                    </picture>
+                    <figcaption><a href = "https://www.cs.uaf.edu/courses/cs301/2014-fall/notes/arm-asm/">original site</a></figcaption>
+                </figure>
             </section>
 
             <section>
@@ -117,6 +138,12 @@ _  __ ___ __  __ _   _ _   _ ____
     <footer>
         <p>&copy; 2025 kiminus@github. All rights reserved.</p>
         <address>Contact us at <a href="zliu094@ucsd.edu">username@ucsd.edu</a></address>
+        <details>
+            <summary>citations</summary>
+            <ul>
+                <li><cite><a href="https://unsplash.com/photos/central-computer-processors-cpu-concept-3d-renderingconceptual-image-_LIZ36OHGKk">background image</a></cite></li>
+            </ul>
+        </details>
 <!--         <note>submit question in textarea</note>-->
         <details>
             <summary>message us: </summary>

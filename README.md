@@ -78,3 +78,26 @@ prevent robot/search engine to find this page:
 <meta property="og:title" content="Compiler Instruction & Design">
 <meta name="robots" content="noindex, nofollow"> 
 ````
+
+# HW3
+### redo with framework
+I used bootstrap framework to redo the site. what i did is essentially replace the flex display with bootstrap grid system. the rest of the site is the same.
+
+by using the boostrap framework, each element 
+here is a comparison of the two sites (no cache):
+
+|metrics| old site (vanilla) | new site (bootstrap) |
+| --- |--------------------|----------------------|
+| css size | 6.34 KB            | 6.9 KB               |
+| DOM Content load time (ms) | 55                 | 142                  |
+| page fully loaded time (ms) | 116                | 144                  |
+| number of requests | 9                  | 10                   |
+| data transfered (KB) | 200                | 268                  |
+| resource loaded by page (KB) | 197                | 504                  |
+
+
+### cascade network flow for vanilla site:
+![vanilla network flow](static/images/cascade-network-vanilla.png)
+
+### cascade network flow for bootstrap site:
+![boostrap network flow.png](static/images/cascade-network-boostrap.png)
