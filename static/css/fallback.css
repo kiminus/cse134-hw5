@@ -160,6 +160,9 @@ iframe {
     width: 100%;
     height: 100%;
 }
+#iframe-alt {
+    display: none;
+}
 
 /* animations */
 @keyframes slideInLeft {
@@ -302,5 +305,10 @@ iframe {
         list-style: none;
         padding: 0;
     }
-
+    #iframe-alt {
+        display: inline;
+    }
+    iframe {
+        display: none;
+    }
 }
