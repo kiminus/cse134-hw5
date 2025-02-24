@@ -163,6 +163,71 @@ iframe {
 #iframe-alt {
     display: none;
 }
+input,textarea, button {
+    margin: 0.5em;
+    padding: 0.5em;
+    border-radius: 7px;
+    border: 2px solid var(--background-color, white);
+}
+input, textarea {
+    &:placeholder-shown {
+        border-color: var(--neutral-color, gray);
+    }
+    &:required {
+        border-color: var(--warning-color, orange);
+    }
+    &:valid {
+        border-color: var(--success-color, green);
+    }
+    &:optional {
+        border-color: var(--background-color, white);
+    }
+    &:invalid {
+         border-color: var(--error-color, red);
+     }
+    &:focus {
+        border-color: var(--info-color, blue);
+    }
+    &:user-invalid {
+        border-color: var(--warning-color, yellow);
+    }
+    &:disabled {
+        border-color: var(--background-secondary-color, gray);
+    }
+}
+
+textarea {
+    width: max(200px, 50vw);
+}
+#contact-form {
+    display: flex;
+    flex-flow: row wrap;
+    width: max(600px, 50vw);
+    & label {
+        flex: 1 1 48%;
+    }
+    & label:last-of-type {
+        flex: 1 1 100%;
+    }
+    & button {
+        background-color: var(--info-color, blue);
+        color: var(--background-color, white);
+        width: 80%;
+        margin: auto auto;
+    }
+    & output {
+        flex: 1 1 48%;
+        margin-top: 0.5em;
+        margin-right: 2%;
+        border-radius: 7px;
+    }
+    & output[role="alert"] {
+        color: var(--error-color, red);
+    }
+    & output[role="status"] {
+        color: var(--info-color, blue);
+    }
+}
 
 /* animations */
 @keyframes slideInLeft {
@@ -311,4 +376,15 @@ iframe {
     iframe {
         display: none;
     }
+    #contact-form {
+        flex-flow: column wrap;
+        width: fit-content;
+        & output {
+            flex: 1 1 48%;
+            margin-top: 0.5em;
+            margin-right: 2%;
+            border-radius: 7px;
+        }
+    }
+
 }

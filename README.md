@@ -101,3 +101,22 @@ here is a comparison of the two sites (no cache):
 
 ### cascade network flow for bootstrap site:
 ![boostrap network flow.png](static/images/cascade-network-boostrap.png)
+
+# HW4
+## part 1, 2
+> please check the "contact us" toggle section in the footer for the contact form implement action
+
+### HTTP request:
+```http request
+POST /post HTTP/1.1
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36
+Host: httpbin.org
+Accept-Language: en-US
+Content-Type: application/x-www-form-urlencoded
+
+name=zilin%20Liu&email=zilin%40gmail.com&comments=this%20is%20a%20test&possible_bot=true
+```
+### response from httpbin
+![img.png](static/images/httpbin_response.png)
+### layout
+![img.png](static/images/contact_info_layout.png)
