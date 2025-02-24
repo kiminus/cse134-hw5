@@ -120,3 +120,9 @@ name=zilin%20Liu&email=zilin%40gmail.com&comments=this%20is%20a%20test&possible_
 ![img.png](static/images/httpbin_response.png)
 ### layout
 ![img.png](static/images/contact_info_layout.png)
+
+## part 3
+### updated layout
+![img.png](static/images/contact_form_layout_with_error_form.png)
+### post request
+![img.png](static/images/form_with_error_form.png)

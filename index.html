@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="./static/css/homepage.css">
     <link rel="stylesheet" type="text/css" href="./static/css/fallback.css">
     <link rel="icon" href="/static/images/icons/favicon.ico">
+    <script src="./static/js/fallback.js" defer></script>
 </head>
 
 <body>
@@ -43,6 +44,7 @@ _  __ ___ __  __ _   _ _   _ ____
                     <img src="static/images/icons/settings.svg" alt="reader settings" width="30" height="30" class="icon">
                     <figcaption>reader settings <kbd>Ctrl+G</kbd></figcaption>
                 </figure>
+                <button id="theme-toggle" aria-label="change theme">&#127774;</button>
             </section>
         </div>
     </header>
@@ -77,8 +79,9 @@ _  __ ___ __  __ _   _ _   _ ____
         <div class="content">
             <aside class="note callout">
                 <strong>Note:</strong> please check this page, assembly language, and computer architecture (under table of contents) for assignment requirements.
-                (HW2: please also check todo.html) other pages are not developed.
-                <a href="index_framwork.html">this is the link to index.html with bootstrap framework</a>
+                (HW2: please also check <a href="site/hw2-htmltag-todo.html"></a>) other pages are not developed.
+                <a href="index_framwork.html">this is the link to index.html with bootstrap framework</a>.
+                <a href="form-no-js.html">this is the link to form-no-js.html for HW4 part 2,3</a>.
             </aside>
             <section>
                 <h2>Assembly language</h2>
@@ -147,25 +150,26 @@ _  __ ___ __  __ _   _ _   _ ____
 <!--         <note>submit question in textarea</note>-->
         <details>
             <summary>message us: </summary>
-            <form action="https://httpbin.org/post" method="post" id="contact-form">
+            <form action="https://httpbin.org/post" method="post" id="contact-form" novalidate>
                 <label for="name">Name:
-                    <input type="text" id="name" name="name" placeholder="Enter Your name..." required minlength="2" maxlength="100">
+                    <input type="text" id="name" name="name" placeholder="Enter Your name..." required minlength="2" maxlength="50">
                 </label>
 
                 <label for="email">Email:
-                    <input type="email" id="email" name="email" placeholder="Enter Your email..." required>
+                    <input type="email" id="email" name="email" placeholder="Enter Your email..." required minlength="3" maxlength="50">
                 </label>
 
                 <label for="comments">Comments:
-                    <textarea id="comments" name="comments" placeholder="Type your comments here..." required minlength="10" maxlength="1000"></textarea>
+                    <textarea id="comments" name="comments" placeholder="Type your comments here..." required minlength="10" maxlength="100"></textarea>
                 </label>
+                <output role="status"></output>
+
                 <input type="hidden" name="possible_bot" value ="true">
                 <button type="submit">Send</button>
 
                 <br>
 
-                <output role="alert" title="Alert message">sample alert</output>
-                <output role="status">SUCCESS</output>
+                <output role="alert" title="Alert message"></output>
             </form>
         </details>
 

@@ -167,7 +167,12 @@ input,textarea, button {
     margin: 0.5em;
     padding: 0.5em;
     border-radius: 7px;
-    border: 2px solid var(--background-color, white);
+    border: 2px solid var(--info-color, blue);
+}
+button {
+    cursor: pointer;
+    background-color: var(--info-color, blue);
+    color: var(--background-color, white);
 }
 input, textarea {
     &:placeholder-shown {
@@ -214,6 +219,7 @@ textarea {
         color: var(--background-color, white);
         width: 80%;
         margin: auto auto;
+        cursor: pointer;
     }
     & output {
         flex: 1 1 48%;
@@ -227,6 +233,16 @@ textarea {
     & output[role="status"] {
         color: var(--info-color, blue);
     }
+}
+.rotating-border {
+    border: 5px solid;
+    animation: borderColorRotate 2s linear infinite;
+}
+#theme-toggle {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    font-size: 1.2rem;
 }
 
 /* animations */
@@ -273,6 +289,24 @@ textarea {
         transform: rotateY(360deg);
     }
 }
+@keyframes borderColorRotate {
+    0% {
+        border-color: orange white white white;
+    }
+    25% {
+        border-color: white orange white white;
+    }
+    50% {
+        border-color: white white orange white;
+    }
+    75% {
+        border-color: white white white orange;
+    }
+    100% {
+        border-color: orange white white white;
+    }
+}
+
 
 /*responsive design*/
 @media (max-width: 1024px) and (min-width: 601px) {
