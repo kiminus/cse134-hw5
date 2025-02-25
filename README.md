@@ -126,3 +126,7 @@ name=zilin%20Liu&email=zilin%40gmail.com&comments=this%20is%20a%20test&possible_
 ![img.png](static/images/contact_form_layout_with_error_form.png)
 ### post request
 ![img.png](static/images/form_with_error_form.png)
+
+## part 4
+### theme switcher
+![img.png](static/images/theme_toggler_layout.png)

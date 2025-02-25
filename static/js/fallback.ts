@@ -1,3 +1,23 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const theme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', theme);
+    const themeToggler = document.getElementById("theme-toggle") as HTMLButtonElement;
+    themeToggler.innerText = theme === 'dark' ? '🌙' : '☀️';
+});
+/* theme switcher */
+const themeToggler = document.getElementById("theme-toggle") as HTMLButtonElement;
+themeToggler.addEventListener('click', onToggleTheme);
+function onToggleTheme() {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    themeToggler.innerText = newTheme === 'dark' ? '🌙' : '☀️';
+}
+
+
+
+/* contact form */
 const contactForm = document.getElementById('contact-form') as HTMLFormElement;
 contactForm.addEventListener('submit', onContactFormSubmission);
 const statusOutput = document.querySelector('#contact-form output[role="status"]') as HTMLOutputElement;
@@ -15,11 +35,13 @@ let form_errors: Record<string, string> = {};
 
 function updateAlertOutput() {
     alertOutput.innerHTML = '';
+    const fragment = document.createDocumentFragment();
     for (const key in form_errors){
         const error = document.createElement('p');
         error.textContent = form_errors[key];
-        alertOutput.appendChild(error);
+        fragment.appendChild(error);
     }
+    alertOutput.appendChild(fragment);
 }
 function onContactFormSubmission(event){
     let flag = false;

@@ -26,6 +26,25 @@
 
     --device-width-cutoff: 1024px;
 }
+[data-theme="dark"] {
+    --background-color: #121212;
+    --background-secondary-color: #1E1E1E;
+    --text-color: #E0E0E0;
+    --text-secondary-color: #B0B0B0;
+    --headings-color: #BB86FC;
+    --headings-secondary-color: #03DAC6;
+
+    /* Callout colors */
+    --info-color: #BB86FC;
+    --success-color: #03DAC6;
+    --warning-color: #FF6F00;
+    --error-color: #CF6679;
+    --neutral-color: #9E9E9E;
+
+    --code-border-color: #333;
+    --code-bg-color: #1E1E1E;
+    --code-text-color: #E0E0E0;
+}
 body {
     font-family: var(--font-body, sans-serif), serif; /* Fallback font */
     color: var(--text-color, color(display-p3 0 0 0));
@@ -39,7 +58,7 @@ header {
     margin-bottom: 20px;
     display: flex;
     justify-content: space-between;
-    color: var(--background-color, white);
+    color: white;
     & h1 {
         color: var(--info-color);
     }
@@ -170,9 +189,9 @@ input,textarea, button {
     border: 2px solid var(--info-color, blue);
 }
 button {
-    cursor: pointer;
     background-color: var(--info-color, blue);
     color: var(--background-color, white);
+    cursor: pointer;
 }
 input, textarea {
     &:placeholder-shown {
@@ -215,11 +234,8 @@ textarea {
         flex: 1 1 100%;
     }
     & button {
-        background-color: var(--info-color, blue);
-        color: var(--background-color, white);
         width: 80%;
         margin: auto auto;
-        cursor: pointer;
     }
     & output {
         flex: 1 1 48%;
@@ -244,6 +260,7 @@ textarea {
     right: 10px;
     font-size: 1.2rem;
 }
+
 
 /* animations */
 @keyframes slideInLeft {
