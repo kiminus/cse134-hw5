@@ -118,7 +118,7 @@ name=zilin%20Liu&email=zilin%40gmail.com&comments=this%20is%20a%20test&possible_
 ```
 ### response from httpbin
 ![img.png](static/images/httpbin_response.png)
-### layout
+### form-no-js.html validation
 ![img.png](static/images/contact_info_layout.png)
 
 ## part 3
@@ -128,5 +128,26 @@ name=zilin%20Liu&email=zilin%40gmail.com&comments=this%20is%20a%20test&possible_
 ![img.png](static/images/form_with_error_form.png)
 
 ## part 4
-### theme switcher
+### theme switcher implementation with JS
 ![img.png](static/images/theme_toggler_layout.png)
+### theme switcher without JS
+- the theme switcher does not worker without JS. 
+- The button has a higher transparency level with a darker background color. When hovered over, the cursor changes to "not-allowed," 
+indicating that the button is not functional.
+![img.png](static/images/theme_switch_no_js.png)
+
+### part 5
+- I used 11ty to generate the site. to run it, please use the latest version (>22) of node.js
+and run the following command:
+```bash
+npm run serve
+```
+- this should start the server at localhost:8080
+- here is a screenshot of the site at /posts/function_inlining:
+![img.png](static/images/ssg.png)
+
+### Extra credit
+- custom theme style:
+![img.png](static/images/custom_theme_style.png)
+- use local storage to store the theme preference:
+![img.png](static/images/custom_theme_style_localstorage.png)

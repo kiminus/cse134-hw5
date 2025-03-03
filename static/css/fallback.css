@@ -124,7 +124,7 @@ code {
     font-family: var(--font-code, monospace), serif; /* Fallback font */
 }
 a:hover {
-    display: inline-block;
+    display: inline;
     background: linear-gradient(
         to right,
         color-mix(in srgb, var(--warning-color, yellow) 50%, var(--background-color, white) 50%),
@@ -177,23 +177,24 @@ picture {
 iframe {
     border: none;
     width: 100%;
-    height: 100%;
+    height: 50vh;
 }
 #iframe-alt {
     display: none;
 }
-input,textarea, button {
+input[type="password"],input[type="email"],input[type="text"],textarea,button,select {
     margin: 0.5em;
     padding: 0.5em;
     border-radius: 7px;
     border: 2px solid var(--info-color, blue);
 }
-button {
+button,select {
     background-color: var(--info-color, blue);
     color: var(--background-color, white);
     cursor: pointer;
 }
 input, textarea {
+    border-width: 3px;
     &:placeholder-shown {
         border-color: var(--neutral-color, gray);
     }
@@ -207,10 +208,11 @@ input, textarea {
         border-color: var(--background-color, white);
     }
     &:invalid {
-         border-color: var(--error-color, red);
-     }
-    &:focus {
-        border-color: var(--info-color, blue);
+        background-color: rgba(255, 0, 0, 0.1);
+        border-color: var(--error-color, red);
+    }
+    &:invalid:required {
+        background-image: linear-gradient(to right, var(--error-color, red), var(--warning-color, orange));
     }
     &:user-invalid {
         border-color: var(--warning-color, yellow);
@@ -254,11 +256,21 @@ textarea {
     border: 5px solid;
     animation: borderColorRotate 2s linear infinite;
 }
-#theme-toggle {
+#theme-switcher {
     position: fixed;
     top: 10px;
     right: 10px;
-    font-size: 1.2rem;
+    & #theme-customizer {
+        background-color: var(--background-color);
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        font-size: small;
+    }
+    & #theme-selector {
+        -webkit-appearance: none;
+        font-size: 1.2rem;
+    }
 }
 
 

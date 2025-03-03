@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>computer architecture</title>
+</head>
+<body>
+    <header>
+        <h1>Computer architecture overview</h1>
+    </header>
+    <main>
+        
+
+<h2><a href = "/posts/algorithm/">optimization algorithm</a></h2>
+<h1>Optimization Algorithm</h1>
+<h2>Introduction</h2>
+<p>This is a simple example of optimization algorithm. The goal is to find the minimum value of a function. The function is defined as:
+$$ f(x) = x^2 + 5x + 6 $$
+The algorithm is implemented in Python. The algorithm is a simple hill climbing algorithm. The algorithm starts at a random point and iteratively move to the direction of the steepest descent. The algorithm stops when the change in the function value is less than a threshold. The algorithm is implemented in Python. The code is shown below:</p>
+<pre><code class="language-python">import numpy as np
+import matplotlib.pyplot as plt
+</code></pre>
+
+
+<h2><a href = "/posts/function_inlining/">compiler optimization - function inlining</a></h2>
+<h3>Function Inlining</h3>
+<blockquote>
+<p>function inlining is a compiler optimization technique that replaces a function call with the function body.
+it moves the function body to the call site.</p>
+</blockquote>
+<h3>Example</h3>
+<pre><code class="language-c">int add(int a, int b) {
+    return a + b;
+}
+</code></pre>
+<pre><code class="language-c">int main() {
+    int x = 1;
+    int y = 2;
+    int z = add(x, y);
+    return z;
+}
+</code></pre>
+<p>after inlining:</p>
+<pre><code class="language-c">int main() {
+    int x = 1;
+    int y = 2;
+    int z = x + y;
+    return z;
+}
+</code></pre>
+
+
+<h2><a href = "/posts/economics/"></a></h2>
+<h1>Chapter 8: Imperfect and Perfect Competition</h1>
+<h2><strong>1. Identify the profit-maximizing quantity for an imperfectly competitive firm</strong></h2>
+<h3><strong>Problem:</strong></h3>
+<p>A monopolist faces the demand curve:
+[ P = 100 - 2Q ]
+and has a total cost function:
+[ TC = 20Q + 100 ]
+What quantity should the monopolist produce to maximize profit?</p>
+<h3><strong>Solution:</strong></h3>
+<ul>
+<li><strong>Revenue Function:</strong>
+[ TR = P \times Q = (100 - 2Q)Q = 100Q - 2Q^2 ]</li>
+<li><strong>Marginal Revenue (MR):</strong>
+[ MR = \frac{dTR}{dQ} = 100 - 4Q ]</li>
+<li><strong>Marginal Cost (MC):</strong>
+[ MC = \frac{dTC}{dQ} = 20 ]</li>
+<li><strong>Profit Maximization Condition:</strong>
+[ MR = MC ]
+[ 100 - 4Q = 20 ]
+[ 4Q = 80 ]
+[ Q^* = 20 ]</li>
+</ul>
+<h3><strong>Answer:</strong></h3>
+<p>The profit-maximizing quantity is <strong>20 units</strong>.</p>
+<hr>
+<h2><strong>2. Identify the profit-maximizing price for an imperfectly competitive firm</strong></h2>
+<h3><strong>Problem:</strong></h3>
+<p>Using the demand curve from Problem 1, what price should the monopolist charge to maximize profit?</p>
+<h3><strong>Solution:</strong></h3>
+<ul>
+<li>Given demand function:
+[ P = 100 - 2Q ]</li>
+<li>Plug in the profit-maximizing quantity ( Q^* = 20 ):
+[ P = 100 - 2(20) = 100 - 40 = 60 ]</li>
+</ul>
+<h3><strong>Answer:</strong></h3>
+<p>The profit-maximizing price is <strong>$60$</strong>.</p>
+<hr>
+<h2><strong>3. Identify loss to consumers/gains to producers and DWL in an imperfectly competitive market, relative to perfect competition</strong></h2>
+<h3><strong>Problem:</strong></h3>
+<p>Assume that in perfect competition, the market price would be $40$ and quantity would be $30$. Calculate:</p>
+<ol>
+<li><strong>Consumer Surplus (CS) under monopoly</strong></li>
+<li><strong>Producer Surplus (PS) under monopoly</strong></li>
+<li><strong>Deadweight Loss (DWL)</strong></li>
+</ol>
+<h3><strong>Solution:</strong></h3>
+<ul>
+<li><strong>Consumer Surplus (CS) under Monopoly:</strong>
+[ CS = \frac{1}{2} (100 - 60) \times 20 = \frac{1}{2} (40 \times 20) = 400 ]</li>
+<li><strong>Producer Surplus (PS) under Monopoly:</strong>
+[ PS = (P - MC) \times Q = (60 - 20) \times 20 = 800 ]</li>
+<li><strong>Deadweight Loss (DWL):</strong>
+[ DWL = \frac{1}{2} (30 - 20) \times (60 - 40) = \frac{1}{2} (10 \times 20) = 100 ]</li>
+</ul>
+<h3><strong>Answer:</strong></h3>
+<ol>
+<li><strong>Consumer Surplus:</strong> $400$</li>
+<li><strong>Producer Surplus:</strong> $800$</li>
+<li><strong>Deadweight Loss:</strong> $100$</li>
+</ol>
+<hr>
+<h2><strong>4. Identify the profit-maximizing quantity for a perfectly competitive firm</strong></h2>
+<h3><strong>Problem:</strong></h3>
+<p>A firm in perfect competition has a cost function:
+[ TC = 5Q^2 + 10Q + 50 ]
+The market price is given as <strong>$40$</strong>. Find the profit-maximizing quantity.</p>
+<h3><strong>Solution:</strong></h3>
+<ul>
+<li><strong>Marginal Cost (MC):</strong>
+[ MC = \frac{dTC}{dQ} = 10Q + 10 ]</li>
+<li><strong>Profit Maximization Condition:</strong>
+[ P = MC ]
+[ 40 = 10Q + 10 ]
+[ 10Q = 30 ]
+[ Q^* = 3 ]</li>
+</ul>
+<h3><strong>Answer:</strong></h3>
+<p>The profit-maximizing quantity is <strong>3 units</strong>.</p>
+<hr>
+<h2><strong>5. Identify the profit-maximizing price for a perfectly competitive firm</strong></h2>
+<h3><strong>Problem:</strong></h3>
+<p>Using the same setup from Problem 4, what is the optimal price a perfectly competitive firm should charge?</p>
+<h3><strong>Solution:</strong></h3>
+<ul>
+<li>In perfect competition, <strong>Price = Market Price</strong>.</li>
+<li>Given <strong>Market Price = $40$</strong>.</li>
+</ul>
+<h3><strong>Answer:</strong></h3>
+<p>The firm should charge <strong>$40$ per unit</strong>.</p>
+<hr>
+<h2><strong>6. Identify the profit-maximizing quantity for a firm that can perfectly price discriminate</strong></h2>
+<h3><strong>Problem:</strong></h3>
+<p>A monopolist faces the demand curve:
+[ P = 120 - 3Q ]
+and has a marginal cost of <strong>$30$</strong> per unit. What is the profit-maximizing quantity if the firm can perfectly price discriminate?</p>
+<h3><strong>Solution:</strong></h3>
+<ul>
+<li>Perfect price discrimination means the firm sells each unit at the maximum price consumers are willing to pay.</li>
+<li><strong>Profit-maximizing condition:</strong>
+[ P = MC ]
+[ 120 - 3Q = 30 ]
+[ 3Q = 90 ]
+[ Q^* = 30 ]</li>
+</ul>
+<h3><strong>Answer:</strong></h3>
+<p>The firm will produce <strong>30 units</strong>.</p>
+<hr>
+<h2><strong>7. Identify the price that a firm that can perfectly price discriminate would charge</strong></h2>
+<h3><strong>Problem:</strong></h3>
+<p>Using the demand function from Problem 6, what prices will the firm charge under perfect price discrimination?</p>
+<h3><strong>Solution:</strong></h3>
+<ul>
+<li>The firm charges each consumer their willingness to pay.</li>
+<li>The highest price is when ( Q = 1 ):
+[ P = 120 - 3(1) = 117 ]</li>
+<li>The lowest price is at <strong>Q = 30</strong> (where MR = MC):
+[ P = 120 - 3(30) = 30 ]</li>
+</ul>
+<h3><strong>Answer:</strong></h3>
+<p>The firm charges <strong>each consumer a different price, from $117$ for the first unit to $30$ for the last unit</strong>.</p>
+<hr>
+<h2><strong>8. Determine the effect of perfect price discrimination on total surplus, consumer surplus, and producer surplus</strong></h2>
+<h3><strong>Problem:</strong></h3>
+<p>What happens to consumer surplus, producer surplus, and total surplus under perfect price discrimination compared to a single-price monopoly?</p>
+<h3><strong>Solution:</strong></h3>
+<ul>
+<li><strong>Consumer Surplus (CS) = 0</strong> (since all surplus is extracted by the firm).</li>
+<li><strong>Producer Surplus (PS) = Total Surplus</strong> (all value is captured by the firm).</li>
+<li><strong>Total Surplus (TS) remains the same as in perfect competition</strong>, since there is no deadweight loss.</li>
+</ul>
+<h3><strong>Answer:</strong></h3>
+<ol>
+<li><strong>Consumer Surplus = 0</strong></li>
+<li><strong>Producer Surplus = Total Surplus</strong></li>
+<li><strong>Total Surplus remains unchanged</strong> compared to perfect competition.</li>
+</ol>
+<hr>
+<p>(The rest of the problems from Chapter 9 and Chapter 11 can follow a similar format.)</p>
+
+
+    </main>
+</body>
+</html>
