@@ -5,6 +5,7 @@
     --text-secondary-color: #E0E0E0;
     --headings-color: #1A237E;
     --headings-secondary-color: #58cafd;
+    --link-color: #007bff;
 
     /* Callout colors */
     --info-color: #2196F3;
@@ -225,6 +226,23 @@ input, textarea {
 textarea {
     width: max(200px, 50vw);
 }
+
+project-card {
+    & picture {
+        display: block;
+        margin-bottom: 8px;
+    }
+    & a {
+        color: var(--link-color);
+        text-decoration: none;
+    }
+}
+#articles-list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    gap: 10px;
+}
 #contact-form {
     display: flex;
     flex-flow: row wrap;
@@ -255,6 +273,9 @@ textarea {
 .rotating-border {
     border: 5px solid;
     animation: borderColorRotate 2s linear infinite;
+}
+#load-articles {
+    margin-bottom: 10px;
 }
 #theme-switcher {
     position: fixed;

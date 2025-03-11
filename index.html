@@ -134,17 +134,13 @@ _  __ ___ __  __ _   _ _   _ ____
 
             <section>
                 <h2>Latest Topics</h2>
-                <article>
-                    <h3>Introduction to Assembly Language</h3>
-                    <p>Learn the basics of assembly language, including common instructions and usage.</p>
-                    <a href="/content/assembly/assembly.html">Read more...</a>
-                </article>
-
-                <article>
-                    <h3>Understanding Computer Architecture</h3>
-                    <p>Explore the evolution of computer architecture and key milestones in its development.</p>
-                    <a href="/content/architecture/architecture.html">Read more...</a>
-                </article>
+                <fieldset id="load-articles">
+                    <legend>load articles!</legend>
+                    <button id="load-articles-local">load local</button>
+                    <button id="load-articles-remote">load remote</button>
+                </fieldset>
+                <div id="articles-list">
+                </div>
             </section>
             <section>
                 <h2>References and Sources</h2>
@@ -226,7 +222,7 @@ _  __ ___ __  __ _   _ _   _ ____
         }
         customElements.define('hello-world', HelloWorld);
     </script>
-
+    <script src="static/js/ProjectCard.js" type="module" defer></script>
 </body>
 
 </html>

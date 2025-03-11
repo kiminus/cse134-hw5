@@ -7,20 +7,22 @@ document.addEventListener('DOMContentLoaded', () => {
     onSelectTheme();
 });
 
-/* theme switcher */
+/* region theme, and theme customizer */
 const themes = {
     light: {
         "--background-color": "#F5F5F5",
         "--text-color": "#222222",
+        "--font-body": "Arial, sans-serif",
     },
     dark: {
         "--background-color": "#121212",
         "--text-color": "#E0E0E0",
+        "--font-body": "Arial, sans-serif",
     }
 }
 const themeSelector = document.getElementById('theme-selector') as HTMLSelectElement;
 const themeCustomizer = document.getElementById('theme-customizer') as HTMLDivElement;
-themeCustomizer.querySelector('button').addEventListener('click', onSaveCustomTheme);
+themeCustomizer.querySelector('button')!.addEventListener('click', onSaveCustomTheme);
 
 function onSelectTheme() {
     const theme = themeSelector.value;
@@ -36,6 +38,7 @@ function onSelectTheme() {
     } else {
         themeCustomizer.style.display = 'none';
     }
+    // @ts-ignore
     useTheme(themes[theme]);
 }
 
@@ -58,18 +61,16 @@ function onSaveCustomTheme() {
     useTheme(customTheme);
     localStorage.setItem('custom-theme', JSON.stringify(customTheme));
 }
+/* endregion */
 
-
-
-
-/* contact form */
+/* region contact form */
 const contactForm = document.getElementById('contact-form') as HTMLFormElement;
 contactForm.addEventListener('submit', onContactFormSubmission);
 const statusOutput = document.querySelector('#contact-form output[role="status"]') as HTMLOutputElement;
+const nameInput = contactForm.elements.namedItem('name') as HTMLInputElement;
+const emailInput = contactForm.elements.namedItem('email') as HTMLInputElement;
+const commentsTextArea = contactForm.elements.namedItem('comments') as HTMLTextAreaElement;
 const alertOutput = document.querySelector('#contact-form output[role="alert"]') as HTMLOutputElement;
-const nameInput = contactForm.elements['name'] as HTMLInputElement;
-const emailInput = contactForm.elements['email'] as HTMLInputElement;
-const commentsTextArea = contactForm.elements['comments'] as HTMLTextAreaElement;
 maskingInput(nameInput);
 maskingInput(emailInput);
 maskingInput(commentsTextArea);
@@ -88,7 +89,8 @@ function updateAlertOutput() {
     }
     alertOutput.appendChild(fragment);
 }
-function onContactFormSubmission(event){
+
+function onContactFormSubmission(event: Event){
     let flag = false;
     [nameInput, emailInput, commentsTextArea].forEach((field) => {
         if (!validateField(field)){
@@ -116,10 +118,10 @@ function validateField(field: HTMLInputElement | HTMLTextAreaElement){
 function maskingInput(input: HTMLInputElement | HTMLTextAreaElement){
     input.addEventListener('input', () => {
         form_errors[input.name] = '';
-        if (validateField(input) === true){
+        if (validateField(input)){
             //make sure the input is only using common letters, numbers and symbols
             const regex = /^[a-zA-Z0-9\s!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]*$/;
-            if (regex.test(input.value) == true){
+            if (regex.test(input.value)){
                 if (input.name in form_errors){
                     delete form_errors[input.name];
                     updateAlertOutput();
@@ -153,3 +155,47 @@ function flashField(field: HTMLInputElement | HTMLTextAreaElement){
         field.classList.remove('rotating-border');
     }, TIMEOUT);
 }
+/* endregion */
+
+/* region json localstorage and JSONbin.io */
+document.addEventListener('DOMContentLoaded', async () => {
+    //we will store data into localstorage
+    const articles = await (await fetch("/static/json/articles.json")).json();
+    localStorage.setItem('articles', JSON.stringify(articles));
+});
+const loadLocalBtn = document.getElementById('load-articles-local') as HTMLButtonElement;
+const loadRemoteBtn = document.getElementById('load-articles-remote') as HTMLButtonElement;
+loadLocalBtn.addEventListener('click', onLoadLocal);
+loadRemoteBtn.addEventListener('click', onLoadRemote);
+function onLoadLocal(){
+    const articles = JSON.parse(localStorage.getItem('articles') || '[]');
+    renderArticles(articles);
+}
+function onLoadRemote() {
+    fetch('https://api.jsonbin.io/b/67cfaf218561e97a50e9ba84/latest', {
+        headers: {
+            "X-Master-Key": "$2a$10$i2gj0SpjZM8Hum.j/TPrdelU18/u8C2k8RFs7s4C9KktC5wFVmGJS",
+            "X-Access-Key": "$2a$10$2JISknW1XPeWCAx4bjCZW.BjoYJOTV02URe5EiZ12c23dV6NycG72",
+        }
+    })
+        .then(response => response.json())
+        .then(data => {
+            localStorage.setItem('articles', JSON.stringify(data));
+            renderArticles(data);
+        })
+        .catch(error => onLoadLocal());
+}
+function renderArticles(articles: any[]){
+    const articleList = document.getElementById('articles-list') as HTMLUListElement;
+    articleList.innerHTML = '';
+    articles.forEach((article: any) => {
+        const card = document.createElement('project-card');
+        card.setAttribute('title', article.title);
+        card.setAttribute('subtitle', article.subtitle);
+        card.setAttribute('src', article.src);
+        card.setAttribute('desc', article.desc);
+        card.setAttribute('href', article.href);
+        articleList.appendChild(card);
+    });
+}
+/* endregion */

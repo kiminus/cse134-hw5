@@ -1,0 +1,51 @@
+[
+  {
+    "title": "Computer Architecture",
+    "subtitle": "Evolution of computer architecture",
+    "src": "https://picsum.photos/id/1/200/100",
+    "desc": "Explore the evolution of computer architecture and key milestones in its development.",
+    "href": "/content/architecture/architecture.html"
+  },
+  {
+    "title": "Assembly Language",
+    "subtitle": "Introduction to assembly language",
+    "src": "https://picsum.photos/id/36/200/100",
+    "desc": "Learn the basics of assembly language and how it is used in modern computing.",
+    "href": "/content/assembly/assembly.html"
+  },
+  {
+    "title": "Performance Measurements",
+    "subtitle": "Benchmarking and performance metrics",
+    "src": "https://picsum.photos/id/175/200/100",
+    "desc": "Understand the importance of benchmarking and performance metrics in software development.",
+    "href": "/content/performance/performance.html"
+  },
+  {
+    "title": "Compiler Design",
+    "subtitle": "Fundamentals of compiler design",
+    "src": "https://picsum.photos/id/200/200/100",
+    "desc": "Discover the principles of compiler design, including lexical analysis, parsing, and optimization techniques.",
+    "href": "https://cs.lmu.edu/~ray/notes/compilers/"
+  },
+  {
+    "title": "Intermediate Code Generation",
+    "subtitle": "Code representation and transformations",
+    "src": "https://picsum.photos/id/403/200/100",
+    "desc": "Learn about intermediate representations (IRs) in compiler design and their role in code optimization.",
+    "href": "https://llvm.org/docs/Frontend/IR.html"
+  },
+  {
+    "title": "Optimizing Compilers",
+    "subtitle": "Techniques for improving code efficiency",
+    "src": "https://picsum.photos/id/252/200/100",
+    "desc": "Explore various optimization strategies used by compilers to enhance program performance.",
+    "href": "https://www.coursera.org/learn/compilers"
+  },
+  {
+    "title": "JIT Compilation",
+    "subtitle": "Just-in-Time compilation and execution",
+    "src": "https://picsum.photos/id/348/200/100",
+    "desc": "Understand how Just-in-Time (JIT) compilation works and its impact on runtime performance.",
+    "href": "https://developer.mozilla.org/en-US/docs/Glossary/Just-in-time_compilation"
+  }
+]

@@ -151,3 +151,21 @@ npm run serve
 ![img.png](static/images/custom_theme_style.png)
 - use local storage to store the theme preference:
 ![img.png](static/images/custom_theme_style_localstorage.png)
+
+
+
+# HW5
+## part 1:
+- here is the screenshot of the project card at index.html
+![projectCards](static/images/project-card.png)
+- here is the screenshot of flattened tree:
+![img.png](static/images/flattened_tree.png)
+## part 2:
+- EC: the load local is implemented, here is the link to video demonstration
+  [dropbox link](https://www.dropbox.com/scl/fi/rnfbz3oxfje3s7y3tfrwg/2025-03-10-22-48-44.mp4?rlkey=2ued61umad2p4cjqungu0fuow&st=5amfaevz&dl=0)
+- https://www.dropbox.com/scl/fi/rnfbz3oxfje3s7y3tfrwg/2025-03-10-22-48-44.mp4?rlkey=2ued61umad2p4cjqungu0fuow&st=5amfaevz&dl=0
+### part 3:
+- modifications made in HW5:
+  - i fixed the custom theme selector from the HW4. previously, the font family would not change back if customized. now even after change the font family, change back to light or default would use the default font
+  - in addition, for the first time user, the default theme instead of light, will use the system `-perfers-color-scheme` to determine the theme.
+  ![img.png](static/images/img.png)
