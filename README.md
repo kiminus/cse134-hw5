@@ -1,8 +1,8 @@
 ### link to site: 
-https://cse134-hw4.netlify.app/
+https://cse134-kiminus-hw5.netlify.app/
 
 ### link to github:
-https://github.com/kiminus/cse134-HW4
+https://github.com/kiminus/cse134-hw5
 
 # Purpose of site
 the purpose of the site is to host my class notes about CSE 142, and explain the topics about assembly language, computer architecture history, performance optimizations, C++ templates and interpreting code from assembly.
@@ -168,4 +168,14 @@ npm run serve
 - modifications made in HW5:
   - i fixed the custom theme selector from the HW4. previously, the font family would not change back if customized. now even after change the font family, change back to light or default would use the default font
   - in addition, for the first time user, the default theme instead of light, will use the system `-perfers-color-scheme` to determine the theme.
-  ![img.png](static/images/img.png)
+  ![img.png](static/images/prefers-color-scheme.png)
+```
+feat: HW5 part 1,2,3 done
+feat: dynamically load articles from remote and local
+fix: HW4 theme selector does not change back to default font family on light/dark mode after customized.
+refactor: organized fallback.ts by divide each feature in different regions
+style: changed ProjectCard.ts css styles
+feat: for the first time user, use the -perfers-color-scheme instead of light theme by default. 
+docs: Update README.md, fix image links
+docs: Add video links for EC, update HW netify link
+``` 
