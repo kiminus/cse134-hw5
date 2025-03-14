@@ -161,22 +161,26 @@ function onLoadLocal() {
     renderArticles(articles);
 }
 function onLoadRemote() {
-    fetch('https://api.jsonbin.io/b/67cfaf218561e97a50e9ba84/latest', {
-        headers: {
-            "X-Master-Key": "$2a$10$i2gj0SpjZM8Hum.j/TPrdelU18/u8C2k8RFs7s4C9KktC5wFVmGJS",
-            "X-Access-Key": "$2a$10$2JISknW1XPeWCAx4bjCZW.BjoYJOTV02URe5EiZ12c23dV6NycG72",
+    const req = new XMLHttpRequest();
+    req.onreadystatechange = function () {
+        if (req.readyState == XMLHttpRequest.DONE) {
+            const articles = JSON.parse(req.responseText);
+            if (articles.message) {
+                alert(articles.message);
+                return;
+            }
+            renderArticles(articles);
         }
-    })
-        .then(response => response.json())
-        .then(data => {
-        localStorage.setItem('articles', JSON.stringify(data));
-        renderArticles(data);
-    })
-        .catch(error => onLoadLocal());
+    };
+    req.open('GET', 'https://api.jsonbin.io/v3/b/67cfaf218561e97a50e9ba84/latest', true);
+    req.setRequestHeader('X-Master-Key', "$2a$10$i2gj0SpjZM8Hum.j/TPrdelU18/u8C2k8RFs7s4C9KktC5wFVmGJS");
+    req.setRequestHeader('X-Bin-Meta', 'false');
+    req.send();
 }
 function renderArticles(articles) {
     const articleList = document.getElementById('articles-list');
     articleList.innerHTML = '';
+    console.log(articles);
     articles.forEach((article) => {
         const card = document.createElement('project-card');
         card.setAttribute('title', article.title);

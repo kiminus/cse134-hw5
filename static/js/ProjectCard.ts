@@ -128,7 +128,6 @@ footer {
                     </a>
                 </footer>
             </article>
-
         `;
         const avatar = this.shadowRoot!.getElementById('avatar') as HTMLElement;
         const title = this.shadowRoot!.querySelector('.title') as HTMLHeadingElement;

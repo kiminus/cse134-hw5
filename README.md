@@ -1,6 +1,9 @@
 ### link to site: 
 https://cse134-kiminus-hw5.netlify.app/
 
+### link to SSG site:
+https://cse134-hw4-ssg.netlify.app/
+
 ### link to github:
 https://github.com/kiminus/cse134-hw5
 
@@ -139,6 +142,7 @@ indicating that the button is not functional.
 ### part 5
 - I used 11ty to generate the site. to run it, please use the latest version (>22) of node.js
 and run the following command:
+- > https://cse134-hw4-ssg.netlify.app/ is the SSG site
 ```bash
 npm run serve
 ```
@@ -179,3 +183,5 @@ feat: for the first time user, use the -perfers-color-scheme instead of light th
 docs: Update README.md, fix image links
 docs: Add video links for EC, update HW netify link
 ``` 
+### part 4:
+- CRUD.html: please visit https://cse134-kiminus-hw5.netlify.app/CRUD.html for crud page

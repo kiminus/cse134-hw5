@@ -129,7 +129,6 @@ footer {
                     </a>
                 </footer>
             </article>
-
         `;
         const avatar = this.shadowRoot.getElementById('avatar');
         const title = this.shadowRoot.querySelector('.title');

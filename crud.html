@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CRUD</title>
+    <link rel="stylesheet" href="/static/css/fallback.css">
+    <script src="/static/js/crud.js" defer></script>
+</head>
+<body>
+    <fieldset>
+      <legend>CRUD</legend>
+      <form id="CRUD-form">
+        <label for="device-id">Device id</label>
+        <input type="text" id="device-id" placeholder="1" required>
+        <label for="device-name">Device name</label>
+        <input type="text" id="device-name" placeholder="Device name">
+        <label for="device-type">Device type</label>
+        <input type="text" id="device-type" placeholder="Device type">
+        <label for="device-battery-level">Device Battery Level</label>
+        <input type="number" id="device-battery-level" placeholder="Device Battery Level" min="0" max="100">
+        <label for="device-status">Device Status</label>
+        <select id="device-status">
+          <option value="online">Online</option>
+          <option value="offline">Offline</option>
+          <option value="unknown">Unknown</option>
+        </select>
+        <div id="CRUD-buttons">
+          <button id="create">Create</button>
+          <button id="read">Read</button>
+          <button id="update">Update</button>
+          <button id="delete">Delete</button>
+        </div>
+        </form>
+    </fieldset>
+    <output id="CRUD-output"></output>
+</body>
+</html>
