@@ -172,7 +172,9 @@ npm run serve
 - modifications made in HW5:
   - i fixed the custom theme selector from the HW4. previously, the font family would not change back if customized. now even after change the font family, change back to light or default would use the default font
   - in addition, for the first time user, the default theme instead of light, will use the system `-perfers-color-scheme` to determine the theme.
-  ![img.png](static/images/prefers-color-scheme.png)
+   
+  - ![img.png](static/images/prefers-color-scheme.png)
+  - the avatar character is the first letter of the Article's title, and I wrote a function to generate background color based on the first 2 characters in the article's title. 
 ```
 feat: HW5 part 1,2,3 done
 feat: dynamically load articles from remote and local
